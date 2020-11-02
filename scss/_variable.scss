@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+//Variables
+
+
+$main-font: 'Karla', sans-serif;
+$header-font: 'Rubik', sans-serif;
+
+$body-bg: linear-gradient(
+    to right, 
+    #54123b, #f2a365
+  );//rgba(82,82,82,.5);
+
+$main-container: 15px 20rem;
+$main-container-md: 10px 10rem;
+$section-container: 0px 5rem;
+
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
+
+//Colors and Effects
+$primary-color: #54123b; //#0f4c75;
+$secondary-color: #84142d; //#3282b8;
+$light-color: #f2a365; //#ff0000;
+$dark-color: #c02739; //#1b262c;
+$white-color: #f2f2f2;
+$black-color: #262626;
+$grey-color: #616161;
+$shadow: 0 1px 5px rgba(104,104,104, 0.8);
+$transparent: rgba(0,0,0,.5);

@@ -1,0 +1,411 @@
+@import 'variable';
+@import 'mcuphotogrid';
+@import 'checklist';
+@import 'showcase';
+@import 'carbon';
+@import 'utilities';
+@import 'config';
+@import 'navigation';
+
+//Test
+/*.ally-tests-grayscale{
+  filter: grayscale(100%) !important;
+}*/
+//Resets
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background: $body-bg;
+    font-size: 1rem;
+    font-family: $main-font;
+    color:$white-color;
+    line-height: 1.4;
+    transition: all .5s ease-out;
+
+    @media screen and (max-width: 1400px){
+        border: 10px solid $transparent;
+    }
+}
+//Utilities 
+a{
+    color: $white-color;
+    text-decoration: none;
+  }
+a.cta{
+    color: $white-color !important;
+    font-size: .7rem;
+    width: 7rem;
+    height: auto;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: $secondary-color;
+    border: 1px solid $white-color !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease 0s;
+
+    &:hover{
+        color: #ffffff !important;
+        background: $dark-color;
+        border-color: $primary-color !important;
+        transition: all 0.4s ease 0s;
+    }
+}
+
+ul{
+    list-style: none;
+  }
+
+h1{
+    color: $dark-color;
+    margin: 0;
+    > p{
+      color: $primary-color;
+    }
+  }
+
+h2{
+    margin: 0;
+    color: $secondary-color;
+    font-size: 1.5rem;  
+    > p{
+      color: $primary-color;
+      font-size: 1.4rem;
+    }
+  }
+
+.container{
+    width: 100%;
+    background: $transparent;
+    max-width: 1600px;
+    margin: auto;
+}
+
+
+  /* Collection Grid*/
+.collection{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    grid-gap: 10px;
+    margin: 10px 0px 20px;
+
+    h2{
+      grid-column: 2fr;
+    }
+     /* Baseball Card for Action Figures*/
+     figure{
+        &.figure-card{
+            position: relative;
+            width: 375px;
+            height: 533px;
+            color: $light-color;
+            border: 15px $transparent solid;
+            text-shadow: 2px 2px 4px $black-color;
+
+            &::before, &::after{
+                content: '';
+            }
+            &::before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 8;
+                border-top: 60px solid $shadow;
+                border-right: 62px solid transparent;
+            }
+            &::after{
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 5;
+                border-top: 62px solid rgb(0, 0, 0);
+                border-right: 62px solid transparent;
+            }
+            .figure-logo{
+                position: absolute;
+                z-index: 15;
+                width: 100px;
+                height: 30px;
+                top: 5px;
+                left: -5px;
+            }
+            .figure-img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                height: 504px;
+                width: 100%;
+                border: 2px rgb(0, 0, 0) solid;
+            }
+            figcaption{
+             position: absolute;
+             bottom: 5px;
+             right: 13px;
+             width: 90%;
+             height: 30vh;
+             text-align: left;
+             font-size:1rem;
+             border: 7px rgb(200, 0, 0); 
+             z-index: 10;
+             background-color: rgba(0, 0, 0, .8);
+             
+
+             span{
+               font-size: 1.2rem;
+             }
+
+             ul{
+               padding: .5rem;
+               color: $dark-color;
+             }
+            }
+            div.af-power-grid{
+              display: grid;
+              grid-template-columns: repeat(9, [col] 29px);
+              gap: .1rem;
+              font-size: .7rem;
+              background-color: rgba(13, 148, 13, .7);
+
+              .p-grid-box{
+                width: 100%;
+                height: 3em;
+                display: flex;
+                align-items: center;
+              justify-content: center;
+                background-color: $transparent;
+                
+                &.p-grid-yellow{                
+                  background-color: rgba(223, 223, 18,.6);
+                }
+                &.p-grid-red{                
+                  background-color: rgba(243, 6, 6, .6);
+                }
+              }
+
+              .p-grid-stat{
+              grid-column: span 2;
+              }
+            }
+          .name{
+            display:none;
+          }
+        }
+    }
+}
+  /* Follow */
+.follow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 30px;
+  
+    a{
+      padding-left: 1.2rem;
+  
+      &:hover{
+        color: $primary-color;
+      }
+    }
+  }
+  
+  
+  /* Links*/
+  .links{
+    background: #f2f2f2;
+    color: #616161;
+    font-size: 12px;
+    padding: 35px 0;
+    li{
+      line-height: 2.8;
+    }
+  }
+  
+ .links-inner{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    transition: all 2s ease-in;
+
+    @media screen and (max-width: 800px){
+      grid-template-columns: 1fr;
+            }
+    ul{
+        li{
+          &:hover{
+            border-bottom: 2px solid $black-color;
+
+            a{
+                color: $light-color;
+                transition: all .5s ease-out;
+            }
+        }
+            a{
+                color: $primary-color;
+            }
+        }
+    }
+ }
+ /* Footer */
+ .footer{
+     background: $white-color;
+     color: $grey-color;
+     font-size: .8rem;
+     padding: 20px 0;
+
+     div.footer-inner{
+         max-width: 1400px;
+         margin: 0 auto;
+         padding: 0 20px 0 20px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+
+         @media screen and (max-width: 800px){
+             flex-direction: column;
+         }
+
+         div{
+             margin-bottom: 20px;
+             display: flex;
+             align-items: center;
+
+             i{
+                 margin-right: 10px;
+             }
+         }
+     }
+
+     ul{
+         display: flex;
+         flex-wrap: wrap;
+        
+         
+         @media screen and (max-width: 800px){
+             flex-direction: column;
+         }
+     }
+
+     li{
+        
+         margin-right: 2rem;
+         margin-bottom: 1.4rem;
+         
+
+         &:hover{
+             border-bottom: 2px solid $black-color;
+
+             a{
+                 color: $light-color;
+                 transition: all .5s ease-out;
+             }
+         }
+         
+         a{
+            color: $secondary-color;
+           
+         }
+     }
+ }
+
+ /*My Age Cover Gallery Styles*/
+/*#CurrentImg{
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 40px;
+
+    img{
+        max-width: 350px;
+        height: 300px;
+    }
+}
+
+
+.collection-showcase-container{
+  display: grid;
+  grid-template-columns: 20% auto;
+}*/
+
+#FavCurrentImg{
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 40px;
+}
+#GreatCoversCurrentImgDetail{
+   width: 300px;
+   max-width: 100%;
+   height: auto;
+   position: sticky;
+   position: -webkit-sticky;
+   background-color: $transparent;
+   color: $secondary-color;
+   border-bottom: 5px solid $light-color;
+   top: 600px;
+   padding: 20px;
+   font-size: .9rem;
+   li{
+       list-style-type: none;
+   }
+}
+.great-covers-imgs{
+    max-width: 100%;
+    padding: 20px;
+    background: linear-gradient(to bottom right, $secondary-color, $dark-color);
+    border: 3px solid $light-color;
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: repeat(4, minmax(200px, 200px));
+    justify-items: center;
+    justify-content: center;
+
+    img{
+        max-width: 350px;
+        height: 300px;
+    }
+}
+.great-covers-detail{
+    display: none;
+}
+/*Fade in animation*/
+@keyframes tcFadeIn{
+    to{
+      opacity:1;
+    }
+  }
+  .top-covers-fade-in{
+    opacity:0;
+    animation:tcFadeIn 0.7s ease-in forwards;
+  }
+
+
+  .skip-to-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 10px;
+    text-decoration: none;
+    transform: translateY(-100%);
+
+    &:focus{
+      transform: none;
+    }
+  }

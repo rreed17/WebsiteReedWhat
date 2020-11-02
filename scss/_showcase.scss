@@ -1,0 +1,131 @@
+/* Showcase */
+.showcase{
+    min-width:100%;
+    height: 400px;
+    background: linear-gradient(
+        $primary-color, 
+        $transparent
+      ),url('../img/header-rw-water-reflection.jpg')
+    no-repeat center center/cover;
+    margin: 1em 0 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+@media screen and (max-width: 850px){
+  height: 275px;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: .9rem; 
+}
+    span{
+      font-size: .7em;
+      padding: .5rem .7rem;
+      color: $light-color;
+      text-shadow: 2px 4px 6px $light-color;
+
+      @media screen and (max-width: 850px){
+        display: block;
+      }
+    }
+    &.collection-showcase{
+        background: linear-gradient(
+            $transparent, 
+            $light-color
+          ),url('../img/header-bg-collector.jpg')
+        no-repeat center center/cover;
+    }
+    &.five-inch-header{
+        background: linear-gradient(
+            $transparent, 
+            $light-color
+          ), url('../img/header-five-inch.jpg')
+        no-repeat center center/cover;
+    }
+    &.comics-header{
+        background: linear-gradient(
+            $transparent, 
+            $light-color
+          ), url('../img/header-rw-water-reflection.jpg')
+        no-repeat center center/cover;
+    }
+    &.media-header{
+      background: linear-gradient(
+          $transparent, 
+          $light-color
+        ), url('../img/header-rw-static.jpg')
+      no-repeat center center/cover;
+  }
+  &.media-dcau-header{
+    background: linear-gradient(
+        $transparent, 
+        $light-color
+      ), url('../img/header-dcau.jpg')
+    no-repeat center center/cover;
+}
+    &.mcu-header{
+        background: linear-gradient(
+            $transparent, 
+            $light-color
+          ), url('../img/header-mcu.jpg')
+        no-repeat center center/cover;
+    }
+    &.mcu-header-main{
+        background: linear-gradient(
+            $transparent, 
+            $grey-color
+          ), url('../img/header-mcu-main.jpg')
+        no-repeat center center/cover;
+    }
+    &.animation-header{
+        background: linear-gradient(
+            $transparent, 
+            $white-color
+          ), url('../img/header-rw-water-reflection.jpg')
+        no-repeat center center/cover;
+    }
+    &.ml-header{
+        background: linear-gradient(
+            $transparent, 
+            $light-color
+          ), url('../img/header-ml.jpg')
+        no-repeat center center/cover;
+    }
+    &.mm-header{
+      background: linear-gradient(
+          $transparent, 
+          $light-color
+        ), url('../img/header-mm.jpg')
+      no-repeat center center/cover;
+  }
+    &.aoa-checklist-header{
+        background: linear-gradient(
+            $transparent, 
+            $light-color
+          ), url('../img/header-checklist-aoa-main.jpg')
+        no-repeat center center/cover;
+    }
+    &.sw2015-checklist-header{
+      background: linear-gradient(
+          $transparent, 
+          $light-color
+        ), url('../img/card-comics-checklist-sw2015.jpg')
+      no-repeat center center/cover;
+  }
+    h1{
+        color: $secondary-color;
+        text-transform: uppercase;
+        background: $transparent;
+        border-left: 5px solid $light-color;
+        border-right: 5px solid $dark-color;
+        
+        padding: 0 15px;
+        text-shadow: 2px 2px 4px #000000;
+        @media screen and (max-width: 850px){
+          font-size: 2rem; 
+        }
+    }
+    p{
+        padding: 2.1rem 2.1rem;
+    }
+}

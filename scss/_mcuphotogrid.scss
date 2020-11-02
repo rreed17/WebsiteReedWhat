@@ -1,0 +1,79 @@
+.mcu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    background:url('../img/header-mcu-main.jpg')
+    no-repeat center center/cover;
+
+    img{
+        width: 240px;
+        height:300px
+    }
+
+    h1{
+       color: $light-color !important;
+       font-family: $header-font;
+       font-size: 3.2rem;
+       text-shadow: 2px 2px 4px $black-color;
+    }
+}
+.phase-one{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: animatePhase 60s linear infinite;
+
+    span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i) * 15deg)) translateZ(380px);
+        -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, $dark-color);
+    
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        p{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+  
+}
+@keyframes animatePhase{
+    0%
+    {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%
+    {
+        transform: perspective(1000px) rotateY(-360deg);
+    }
+}
+
+
+    .box{
+        background-color: $light-color;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        margin: 0;
+    }
