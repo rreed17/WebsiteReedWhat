@@ -380,7 +380,13 @@ span i.fa.fa-book-open {
 }
 
 .showcase p {
-  padding: 2.1rem 2.1rem;
+  padding: 2rem 2rem;
+}
+
+@media screen and (max-width: 700px) {
+  .showcase p {
+    display: none;
+  }
 }
 
 /* Carbon*/
@@ -402,12 +408,11 @@ span i.fa.fa-book-open {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 15rem;
   }
 }
 
 .carbon.half-height {
-  max-height: 12rem;
+  max-height: 15rem;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;

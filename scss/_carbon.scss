@@ -8,11 +8,10 @@
     
     @media screen and (max-width: 1025px){
     flex-direction: column;
-    height: 15rem;
   }
 
   &.half-height{
-    max-height: 12rem;
+    max-height: 15rem;
     flex-direction: row;
     align-items: center;
     position: relative;
