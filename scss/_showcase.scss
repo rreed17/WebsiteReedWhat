@@ -1,7 +1,7 @@
 /* Showcase */
 .showcase{
     min-width:100%;
-    height: 400px;
+    height: 10rem;
     background: linear-gradient(
         $primary-color, 
         $transparent
@@ -22,7 +22,7 @@
       font-size: .7em;
       padding: .5rem .7rem;
       color: $light-color;
-      text-shadow: 2px 4px 6px $light-color;
+      text-shadow: 2px 2px 4px $light-color;
 
       @media screen and (max-width: 850px){
         display: block;
@@ -120,7 +120,7 @@
         border-right: 5px solid $dark-color;
         
         padding: 0 15px;
-        text-shadow: 2px 2px 4px #000000;
+        text-shadow: 2px 2px 2px #000000;
         @media screen and (max-width: 850px){
           font-size: 2rem; 
         }

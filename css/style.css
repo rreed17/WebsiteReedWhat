@@ -37,6 +37,12 @@
           animation: animatePhase 60s linear infinite;
 }
 
+.phase-one:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  cursor: pointer;
+}
+
 .phase-one span {
   position: absolute;
   top: 0;
@@ -60,6 +66,15 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.phase-one span span.mcu-modal {
+  display: none;
+}
+
+.phase-one span span.mcu-modal.mcu-details {
+  min-width: 50vw;
+  min-height: 50vw;
 }
 
 .phase-one span p {
@@ -998,13 +1013,26 @@ h2 > p {
   position: absolute;
   bottom: 5px;
   right: 13px;
-  width: 90%;
+  width: 82%;
   height: 30vh;
   text-align: left;
   font-size: 1rem;
   border: 7px #c80000;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.collection figure.figure-card figcaption h2 {
+  margin: .4rem;
+  color: #c02739;
+  font-size: 1.3rem;
+  padding: .4rem;
+}
+
+.collection figure.figure-card figcaption p {
+  color: #f2a365;
+  font-size: .9rem;
+  padding: .6rem;
 }
 
 .collection figure.figure-card figcaption span {
@@ -1019,8 +1047,8 @@ h2 > p {
 .collection figure.figure-card div.af-power-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: ([col] 29px)[9];
-      grid-template-columns: repeat(9, [col] 29px);
+  -ms-grid-columns: ([col] 30px)[9];
+      grid-template-columns: repeat(9, [col] 30px);
   gap: .1rem;
   font-size: .7rem;
   background-color: rgba(13, 148, 13, 0.7);

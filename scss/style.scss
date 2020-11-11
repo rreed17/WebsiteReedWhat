@@ -150,7 +150,7 @@ h2{
              position: absolute;
              bottom: 5px;
              right: 13px;
-             width: 90%;
+             width: 82%;
              height: 30vh;
              text-align: left;
              font-size:1rem;
@@ -158,6 +158,18 @@ h2{
              z-index: 10;
              background-color: rgba(0, 0, 0, .8);
              
+             h2{
+              margin: .4rem;
+              color: $dark-color;
+              font-size: 1.3rem;
+              padding: .4rem;
+            }
+
+            p{
+              color: $light-color;
+              font-size: .9rem;
+              padding: .6rem;
+            }
 
              span{
                font-size: 1.2rem;
@@ -170,7 +182,7 @@ h2{
             }
             div.af-power-grid{
               display: grid;
-              grid-template-columns: repeat(9, [col] 29px);
+              grid-template-columns: repeat(9, [col] 30px);
               gap: .1rem;
               font-size: .7rem;
               background-color: rgba(13, 148, 13, .7);

@@ -1,9 +1,4 @@
 
-//toggle for Nav Menu at 700px max-width
-document.querySelector('.menu-btn').addEventListener
-      ('click', () => document.querySelector('.main-menu')
-          .classList.toggle('show'));
-/////////////////////////////////////////////////////////////
 // ===== Scroll to Top ==== 
 $(window).scroll(function() {
   if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
@@ -40,10 +35,16 @@ function imgClick(e){
   //Change the opacity to opacity Variable
     e.target.style.opacity = opacity;
   }
-
+////////////////////////////////////////////////////////////////////
 
   $(document).ready(function(){
     $('.figure-logo').click(function(){
       $(this).parent().find(".name").fadeToggle();
     });
   })
+
+  //Function to show menu when menu button is shown on smaller screens toggle for Nav Menu at 700px max-width
+  document.querySelector('.menu-btn').addEventListener
+  ('click', () => document.querySelector('.main-nav')
+      .classList.toggle('show'));
+  ////////////////////////////////////////////////////////////////////

@@ -48,7 +48,14 @@
 <section class="mcu-container">
   <article class="phase-one">
     <span style="--i:1;"><p>Phase 1</p></span>
-    <span style="--i:2;"><img src="../img/collect-mcu/img_im.jpg" alt="Iron Man Movie Poster"></span>
+    <span style="--i:2;">
+      <img src="../img/collect-mcu/img_im.jpg" alt="Iron Man Movie Poster">
+      <span class="mcu-modal">
+        <span class="mcu-detals">
+          <h2>Iron Man</h2>
+        </span>
+      </span>
+    </span>
     <span style="--i:3;"><img src="../img/collect-mcu/img_tih.jpg" alt="The Incredible Hulk Movie Poster"></span>
     <span style="--i:4;"><img src="../img/collect-mcu/img_im2.jpg" alt="Iron Man 2 Movie Poster"></span>
     <span style="--i:5;"><img src="../img/collect-mcu/img_t.jpg" alt="Thor Movie Poster"></span>
@@ -144,11 +151,7 @@ $('#return-to-top').click(function() {      // When arrow is clicked
 });
 
 </script>
-<script>
-  document.querySelector('.menu-btn').addEventListener
-      ('click', () => document.querySelector('.main-nav')
-          .classList.toggle('show'));
-</script>
+
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init({

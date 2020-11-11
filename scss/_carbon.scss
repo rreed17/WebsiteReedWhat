@@ -11,7 +11,7 @@
   }
 
   &.half-height{
-    max-height: 15rem;
+    max-height: 8rem;
     flex-direction: row;
     align-items: center;
     position: relative;
@@ -139,10 +139,7 @@
     no-repeat center center/cover;
  }
  &.carbon-ml-616{
-  background:linear-gradient(
-      $dark-color,
-      $transparent
-    ), url('../img/carbon-ml-616.jpg')
+  background:url('../img/carbon-ml-616.jpg')
   no-repeat center center/cover;
 }
 &.carbon-ml-mcu{
